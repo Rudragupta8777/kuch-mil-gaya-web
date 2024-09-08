@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindIT</title>
+    <link rel="stylesheet" href="Desktop_2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <a href="#">
+                    <img src="images/Profile.png" alt="Profile Icon" class="icon">
+                    View Profile
+                </a>
+                <a href="#">
+                    <img src="images/notification.png" alt="Notification Icon" class="icon">
+                    Notifications
+                </a>
+            </div>
+            <h1>Hello again,</h1>
+            <!-- Dynamically update the user's first name -->
+            <h2 id="userName">!</h2>
+            <p>What are you here for today?</p>
+            <button class="btn">Find Something I lost</button>
+            <button class="btn">Report Something I found</button>
+        </div>
+    </div>
+
+    <!-- Mascot image and Footer code -->
+    <div class="mascot">
+        <img src="images/Designer-mask-web.png" alt="Mascot Image">
+    </div>
+
+    <div class="footer-content">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <div class="social-links">
+            <a href="#" class="find-us">Find Us</a>
+            <a href="#"><img src="images/Instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="images/X.png" alt="Twitter"></a>
+            <a href="#"><img src="images/Linkedin.png" alt="LinkedIn"></a>
+            <a href="#"><img src="images/Github.png" alt="GitHub"></a>
+        </div>
+    </div>
+
+    <div class="design-top-left"></div>
+    <div class="design-bottom-right"></div>
+    
+    <!-- Script to fetch and display the first name -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const firstName = localStorage.getItem("firstName");
+            if (firstName) {
+                document.getElementById("userName").textContent = firstName + "!";
+            }
+        });
+    </script>
+</body>
+</html>
+

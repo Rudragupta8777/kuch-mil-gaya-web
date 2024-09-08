@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+/* Hide scrollbar in WebKit browsers */
+html::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+/* Hide scrollbar in Firefox */
+html {
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #191919;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 60vh;
+    position: relative;
+    overflow-y: scroll; /* Allow vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal scrolling */
+}
+
+.container {
+    width: 100%;
+    max-width: 1300px;
+    height: 100%;
+    max-height: 819px;
+    flex-shrink: 0;
+    padding: 50px;
+    position: relative;
+    overflow-y: auto; /* Allow vertical scrolling within the container */
+    overflow-x: hidden; /* Hide horizontal scrolling */
+    z-index: 1;
+}
+
+.card {
+    background-color: #1E1E1E;
+    border-radius: 20px;
+    padding: 100px;
+    color: #FFFFFF;
+    width: 1100px;
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+    margin-top: -10px;
+    z-index: 2;
+}
+
+.card-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    margin-top: -40px;
+}
+
+.card-header a {
+    color: #FFFFFF;
+    text-decoration: underline;
+    margin-left: 20px;
+    font-weight: 300;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.card-header a .icon {
+    margin-right: 8px;
+    width: 22px;
+    height: 20px;
+}
+
+h1 {
+    font-size: 42px;
+    margin: 0;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 72px;
+    color: #FFEEC3;
+    margin: 10px 0 30px 0;
+    font-weight: 600;
+    margin-bottom: 90px;
+}
+
+p {
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.btn {
+    display: block;
+    width: 700px;
+    height: 63px;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #FFEEC3;
+    border: none;
+    border-radius: 10px;
+    color: #000000;
+    font-size: 34px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.mascot {
+    position: absolute;
+    top: 50%;
+    right: -15%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.mascot img {
+    width: 1000px;
+    height: 900px;
+    object-fit: contain;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 30px;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    padding: 20px 50px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 3;
+}
+
+.logo {
+    width: 159px;
+    height: 73px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    margin-left: 40%;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    margin-left: 65%; /* Space between "Find Us" and social icons */
+}
+
+.social-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin-left: 15px; /* Space between social icons */
+    font-size: 20px;
+}
+
+.social-links img {
+    width: 20px; /* Adjust size of social icons */
+    height: 20px;
+}
+
+/* Ensure only "Find Us" is underlined */
+.find-us {
+    text-decoration: underline !important; /* Force underline */
+    color: #FFFFFF; /* Ensure color matches */
+}
+
+.design-top-left, .design-bottom-right {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    z-index: 2;
+}
+
+.design-top-left {
+    width: 200px;
+    height: 70px;
+    top: 0;
+    left: 0;
+    background-image: url('images/top-left.png');
+}
+
+.design-bottom-right {
+    width: 200px;
+    height: 150px;
+    bottom: -5%;
+    right: 0;
+    background-image: url('images/bottom-right.png');
+}
