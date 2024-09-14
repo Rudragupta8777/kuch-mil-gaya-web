@@ -23,8 +23,10 @@
             <!-- Dynamically update the user's first name -->
             <h2 id="userName">!</h2>
             <p>What are you here for today?</p>
-            <button class="btn">Find Something I lost</button>
+            <button class="btn" onclick="window.location.href='finditem.html'">Find Something I lost</button>
             <button class="btn">Report Something I found</button>
+            <!-- Logout Button -->
+            <button class="btn" id="logoutButton">Logout</button>
         </div>
     </div>
 
@@ -49,15 +51,7 @@
     <div class="design-top-left"></div>
     <div class="design-bottom-right"></div>
     
-    <!-- Script to fetch and display the first name -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const firstName = localStorage.getItem("firstName");
-            if (firstName) {
-                document.getElementById("userName").textContent = firstName + "!";
-            }
-        });
-    </script>
+    <!-- Include Firebase libraries and JavaScript module -->
+    <script type="module" src="Desktop_2.js"></script>
 </body>
 </html>
-

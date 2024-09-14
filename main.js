@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -24,6 +24,30 @@ provider.setCustomParameters({
   hd: "vitstudent.ac.in"  // Hint to prioritize vitstudent.ac.in domain accounts
 });
 
+// Check if the user is already logged in
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is signed in, check domain and redirect if necessary
+    const email = user.email;
+    const allowedDomain = "vitstudent.ac.in";
+    const userDomain = email.split('@')[1];
+
+    if (userDomain === allowedDomain) {
+      // User's domain matches, get the first name and redirect
+      const firstName = user.displayName.split(" ")[0];
+      localStorage.setItem("firstName", firstName);
+      
+      // Redirect to the next page
+      window.location.href = "Desktop_2.html";
+    } else {
+      // Domain doesn't match, sign out the user
+      alert("You must sign in with an email from " + allowedDomain);
+      signOut(auth);
+    }
+  }
+});
+
+// Set up the Google sign-in button click handler
 const googleLogin = document.getElementById("googleSignInButton");
 
 googleLogin.addEventListener("click", function() {
@@ -37,9 +61,12 @@ googleLogin.addEventListener("click", function() {
       const userDomain = email.split('@')[1];
 
       if (userDomain === allowedDomain) {
-        // If domain matches, extract first name and redirect to page 2
+        // If domain matches, extract first name and save to localStorage
         const firstName = user.displayName.split(" ")[0];
         localStorage.setItem("firstName", firstName);
+        localStorage.setItem("email", email);
+        localStorage.setItem("uid", user.uid);  // Save user's unique ID
+        localStorage.setItem("lastLogin", new Date().toISOString());  // Save last login time
 
         // Redirect to the next page
         window.location.href = "Desktop_2.html";
@@ -50,6 +77,6 @@ googleLogin.addEventListener("click", function() {
       }
     })
     .catch((error) => {
-      console.error(error);
+      console.error("Error signing in: ", error);
     });
 });
