@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate and Validate 6-Digit Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            flex-direction: column;
+        }
+        .container {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .code {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .expired {
+            color: red;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .message {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Code Generator and Validator</h1>
+    
+    <!-- Code Generator Section -->
+    <div>
+        <button id="generateBtn">Generate Code</button>
+        <div id="codeDisplay" class="code"></div>
+    </div>
+
+    <!-- User Input Section -->
+    <div>
+        <input type="text" id="userCode" placeholder="Enter the code here">
+        <button id="validateBtn">Validate Code</button>
+        <div id="message" class="message"></div>
+    </div>
+</div>
+
+<script>
+    let generatedCode = null;
+    let codeTimeout;
+    let codeValid = false;
+
+    // Generate Code
+    document.getElementById('generateBtn').addEventListener('click', function() {
+        // Clear any existing timeout
+        clearTimeout(codeTimeout);
+
+        // Generate a 6-digit random code
+        generatedCode = Math.floor(100000 + Math.random() * 900000);
+
+        // Display the code
+        const codeDisplay = document.getElementById('codeDisplay');
+        codeDisplay.textContent = `Your Code: ${generatedCode}`;
+        codeDisplay.classList.remove('expired');
+
+        // Set the code as valid
+        codeValid = true;
+
+        // Set timeout for 30 seconds
+        codeTimeout = setTimeout(function() {
+            codeDisplay.textContent = "Code expired.";
+            codeDisplay.classList.add('expired');
+            codeValid = false; // Code becomes invalid after 30 seconds
+        }, 30000); // 30 seconds
+    });
+
+    // Validate Code
+    document.getElementById('validateBtn').addEventListener('click', function() {
+        const userEnteredCode = document.getElementById('userCode').value;
+        const messageDisplay = document.getElementById('message');
+
+        // Check if the entered code matches the generated code and is still valid
+        if (codeValid && userEnteredCode == generatedCode) {
+            messageDisplay.textContent = "Code is valid!";
+            messageDisplay.classList.remove('error');
+            messageDisplay.classList.add('success');
+        } else {
+            messageDisplay.textContent = "Wrong code or code expired.";
+            messageDisplay.classList.remove('success');
+            messageDisplay.classList.add('error');
+        }
+    });
+</script>
+
+</body>
+</html>

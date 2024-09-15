@@ -24,7 +24,6 @@ body {
     overflow-x: hidden; /* Hide horizontal scrolling */
 }
 
-
 .container {
     width: 100%;
     max-width: 1300px;
@@ -50,25 +49,7 @@ body {
     margin-top: -10px;
     z-index: 2;
 }
-
-h1, h2 {
-    color: #FFEEC3;
-}
-
-p {
-    color: #FFFFFF;
-    font-size: 20px;
-}
-
-.btn {
-    background-color: #FFEEC3;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 10px;
-    font-size: 20px;
-    color: #000;
-    cursor: pointer;
-}
+/* Type herw hat you want inside container  */
 .mascot {
     position: absolute;
     top: 50%;
