@@ -1,0 +1,39 @@
+/*=========== TABLE OF CONTENTS ===========
+1. CSS Variables
+2. Utility CSS
+==========================================*/
+
+/*-------------------------------------
+  1. CSS Variables
+--------------------------------------*/
+:root {
+  /*------Color variables------*/
+  --black_900: #000000;
+  --gray_50: #f8f8f8;
+  --gray_900: #1e1e1e;
+  --gray_900_01: #191919;
+  --red_800_3f: #d325253f;
+  --white_a700: #ffffff;
+  --yellow_100: #ffeec3;
+
+  /*------Shadow variables------*/
+  --shadow-xs: 0 4px 8px 0 #d325253f;
+
+  /*------Border radius variables------*/
+  --radius-xs: 12px;
+  --radius-sm: 20px;
+  --radius-md: 44px;
+
+  /*------Spacing variables------*/
+  --space-xs: 18px;
+}
+
+/*-------------------------------------
+  2. Utility CSS
+--------------------------------------*/
+.flex-row-center-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

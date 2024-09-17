@@ -1,0 +1,369 @@
+/*=========== TABLE OF CONTENTS ===========
+1. Common CSS
+2. Page CSS
+==========================================*/
+
+/*-------------------------------------
+  1. Common CSS
+--------------------------------------*/
+.your_activity {
+  color: var(--black_900);
+  padding-left: 34px;
+  padding-right: 34px;
+  font-size: 24px;
+  background-color: var(--yellow_100);
+  box-shadow: var(--shadow-xs);
+  align-self: stretch;
+  text-align: center;
+  height: 60px;
+  border-radius: var(--radius-xs);
+  @media only screen and (max-width: 1050px) {
+    font-size: 22px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.about_us {
+  color: var(--black_900);
+  padding-left: 34px;
+  padding-right: 34px;
+  font-size: 24px;
+  background-color: var(--yellow_100);
+  box-shadow: var(--shadow-xs);
+  text-align: center;
+  height: 60px;
+  min-width: 420px;
+  border-radius: var(--radius-xs);
+  @media only screen and (max-width: 1050px) {
+    font-size: 22px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/*-------------------------------------
+  2. Page CSS
+--------------------------------------*/
+.desktop-three {
+  background-color: var(--gray_900_01);
+  width: 100%;
+}
+
+.stackggprofile {
+  height: 918px;
+  position: relative;
+}
+
+.column {
+  background-color: var(--gray_900);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 21px;
+  right: 0px;
+  left: 0px;
+  max-width: 1340px;
+  width: 100%;
+  padding: 46px;
+  margin: auto 50px;
+  border-radius: var(--radius-sm);
+  @media only screen and (max-width: 1050px) {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 20px;
+  }
+}
+
+.columnggprofile {
+  margin-top: 72px;
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+  }
+}
+
+.ggprofile_one {
+  height: 290px;
+  margin-left: 276px;
+  width: 38%;
+  object-fit: contain;
+  @media only screen and (max-width: 1050px) {
+    margin-left: 0px;
+  }
+}
+
+.rudragupta {
+  margin-top: -8px;
+  margin-left: 112px;
+  position: relative;
+  @media only screen and (max-width: 1050px) {
+    margin-left: 0px;
+  }
+}
+
+.keshavdadhichtw-link {
+  margin-top: 22px;
+  margin-left: 226px;
+  @media only screen and (max-width: 1050px) {
+    margin-left: 0px;
+  }
+}
+
+.keshavdadhichtw {
+  color: var(--white_a700) !important;
+  text-decoration: underline;
+}
+
+.row {
+  margin-top: 42px;
+  align-self: stretch;
+}
+
+.rowyour {
+  gap: 10px;
+  display: flex;
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+  }
+}
+
+.columnyour {
+  gap: var(--space-xs);
+  display: flex;
+  width: 38%;
+  flex-direction: column;
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+  }
+}
+
+.columnabout_us {
+  padding-left: 10px;
+  padding-right: 10px;
+  gap: var(--space-xs);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: start;
+  @media only screen and (max-width: 1050px) {
+    align-self: stretch;
+  }
+}
+
+.sign_out {
+  color: var(--black_900);
+  margin-top: 18px;
+  margin-left: 226px;
+  padding-left: 34px;
+  padding-right: 34px;
+  font-size: 24px;
+  background-color: var(--yellow_100);
+  box-shadow: var(--shadow-xs);
+  text-align: center;
+  height: 60px;
+  min-width: 420px;
+  border-radius: var(--radius-xs);
+  @media only screen and (max-width: 1050px) {
+    font-size: 22px;
+    margin-left: 0px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.designer_one {
+  height: 918px;
+  opacity: 0.3;
+  width: 40%;
+  object-fit: contain;
+  position: absolute;
+  right: 1px;
+  bottom: 0px;
+  top: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.headerhealthico {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  left: 0px;
+  gap: 20px;
+  margin: auto;
+  @media only screen and (max-width: 550px) {
+    flex-direction: column;
+    position: relative;
+  }
+}
+
+.stackhealthicon {
+  height: 178px;
+  width: 38%;
+  position: relative;
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.image {
+  height: 124px;
+  width: 54%;
+  object-fit: contain;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin: auto;
+}
+
+.rowhealthiconsu {
+  gap: 26px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 1px;
+  right: 0px;
+  margin: auto;
+}
+
+.healthiconsui {
+  height: 84px;
+  width: 84px;
+}
+
+.myprofile {
+  align-self: end;
+}
+
+.iconoirhome_one {
+  height: 44px;
+  margin-bottom: 32px;
+  margin-right: 146px;
+  align-self: end;
+  width: 44px;
+  @media only screen and (max-width: 550px) {
+    align-self: auto;
+    width: 100%;
+    margin-right: 0px;
+  }
+}
+
+.footerfooterlog {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+  @media only screen and (max-width: 550px) {
+    flex-direction: column;
+  }
+}
+
+.footerlogo_one {
+  height: 72px;
+  margin-left: 124px;
+  width: 158px;
+  object-fit: contain;
+  @media only screen and (max-width: 550px) {
+    margin-left: 0px;
+  }
+}
+
+.rowfindus {
+  gap: 28px;
+  align-self: center;
+  display: flex;
+  width: 24%;
+  justify-content: center;
+  align-items: start;
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.findus {
+  margin-top: 36px;
+  text-decoration: underline;
+}
+
+.stackinfo_one {
+  height: 126px;
+  align-self: center;
+  flex: 1;
+  position: relative;
+  align-content: center;
+  @media only screen and (max-width: 1050px) {
+    height: auto;
+  }
+}
+
+.rowinfo_one {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info_one {
+  height: 20px;
+  margin-top: 38px;
+  width: 20px;
+}
+
+.image_one {
+  height: 126px;
+  margin-left: -12px;
+  align-self: center;
+  position: relative;
+  width: 92%;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+}
+
+.rowtelevision {
+  gap: 12px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 14%;
+  top: 32%;
+  margin: auto;
+}
+
+.television_one {
+  height: 14px;
+  align-self: start;
+}
+
+.link_one {
+  height: 18px;
+  width: 18px;
+}
+
+.user_one {
+  height: 18px;
+}

@@ -1,0 +1,58 @@
+/*=========== TABLE OF CONTENTS ===========
+1. Text CSS
+2. Heading CSS
+==========================================*/
+
+/*-------------------------------------
+  1. Text CSS
+--------------------------------------*/
+.ui.text.size-textxs {
+  font-size: 20px;
+  font-weight: 300;
+  font-style: bold;
+}
+
+.ui.text {
+  color: var(--white_a700);
+  font-family: Montserrat;
+}
+
+/*-------------------------------------
+  2. Heading CSS
+--------------------------------------*/
+.ui.heading.size-headingxs {
+  font-size: 20px;
+  font-weight: 600;
+  font-style: bold;
+}
+
+.ui.heading.size-headings {
+  font-size: 45px;
+  font-weight: 600;
+  font-style: bold;
+  @media only screen and (max-width: 1050px) {
+    font-size: 41px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    font-size: 35px;
+  }
+}
+
+.ui.heading.size-headingmd {
+  font-size: 50px;
+  font-weight: 600;
+  font-style: bold;
+  @media only screen and (max-width: 1050px) {
+    font-size: 46px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    font-size: 40px;
+  }
+}
+
+.ui.heading {
+  color: var(--yellow_100);
+  font-family: Montserrat;
+}
